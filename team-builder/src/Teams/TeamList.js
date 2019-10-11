@@ -4,11 +4,15 @@ const TeamList = (props) => {
     console.log(props);
     return (
         <div>
-            <ul>
-                {props.memberList.map((member) => {
-                    return <li key={member.id}>{member.name}</li>
-                })}
-            </ul>
+            {props.memberList.map((member) => {
+                return (
+                    <ul key={member.id}>
+                        <li>{member.name}</li>
+                        <li>{member.title}</li>
+                        <li>{member.email}</li>
+                    </ul>
+                )
+            })}
         </div>
     );
 };

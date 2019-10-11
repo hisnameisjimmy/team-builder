@@ -7,17 +7,23 @@ import AddTeamMember from './Teams/TeamMember.js';
 function App() {
   const [members, setMembers] = useState([
     {
-      name: "Jimmy Hooker"
+      name: "Jimmy Hooker",
+      title: "VP of Product",
+      email: "jimmy@badgermapping.com"
     },
     {
-      name: "Jay Maats"
+      name: "Jay Maas",
+      title: "Team Lead",
+      email: "jay@wahtever.com"
     }
   ]);
 
   const addTeamMemberFunction = teamMember => {
     const newMember = {
-      // id: Date.now(),
-      name: teamMember.name
+      id: Date.now(),
+      name: teamMember.name,
+      title: teamMember.title,
+      email: teamMember.email
     };
     console.log(teamMember);
     setMembers([...members, newMember])
